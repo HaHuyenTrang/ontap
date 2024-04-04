@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var A = [1, 2, 5, 4, 3, 2, 6, 5, 2];
+      var count = {};
+
+      for (let i = 0; i < A.length; i++) {
+        if (count[A[i]]) {
+          count[A[i]] += 1;
+        } else {
+          count[A[i]] = 1;
+        }
+      }
+
+      for (let key in count) {
+        if (count[key] >= 2) {
+          console.log("Số xuất hiện 2 lần trở lên: " + key);
+        }
+      }
+    </script>
+  </body>
+</html>
