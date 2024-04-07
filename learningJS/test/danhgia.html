@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .border {
+        background-color: rgb(60, 60, 125);
+        padding: 40px;
+        height: 800px;
+      }
+      h1 {
+        color: pink;
+        text-align: center;
+      }
+      .chill {
+        background-color: white;
+        height: 76%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 5%;
+      }
+      li {
+        list-style: none;
+      }
+      ul {
+        display: flex;
+        gap: 20px;
+      }
+      .li {
+        background-color: rgb(247, 247, 247);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .input input {
+        width: 500px;
+        height: 70px;
+      }
+      .input button {
+        margin-left: -90px;
+        width: 70px;
+        height: 30px;
+      }
+      .li:hover {
+        background-color: pink;
+      }
+      #feedbackList {
+        height: 200px;
+        overflow-y: auto;
+      }
+      .edit-button,
+      .delete-button {
+        margin: 5px;
+      }
+      #feedbackList{
+        display: flex;
+        gap:500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="border">
+      <h1>Feedback Coach</h1>
+      <div class="chill">
+        <h2>Thầy dạy anh em có hay không</h2>
+        <br />
+        <br />
+        <div>
+          <ul>
+            <li class="li">1</li>
+            <li class="li">2</li>
+            <li class="li">3</li>
+            <li class="li">4</li>
+            <li class="li">5</li>
+            <li class="li">6</li>
+            <li class="li">7</li>
+            <li class="li">8</li>
+            <li class="li">9</li>
+            <li class="li">10</li>
+          </ul>
+        </div>
+        <br /><br /><br /><br />
+        <div class="input">
+          <input type="text" placeholder="Write a review" id="reviewInput" />
+          <button id="addFeedback" onclick="addFeedback()">send</button>
+        </div>
+        <div>
+          <br>
+          <br>
+          <h3>Feedback</h3>
+          <div class="feedback-list" id="feedbackList" style="display: none;">
+            <b><span class="material-symbols-outlined">
+              account_circle
+             </b>
+             <!-- <ul id="feedbackItems"></ul> -->
+             <b> </span> <span class="material-symbols-outlined">
+              edit_square
+              </span><span class="material-symbols-outlined">
+                delete
+                </span></b>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // hiển thị from fb
+      const click = document.getElementById("feedbackList");
+      const myclick = document.getElementById("addFeedback");
+      myclick.addEventListener("click", function(){
+        click.style.display ='flex'
+        addFeedback();
+      });
+      
+      // function render(){
+      // let element = "";
+      // for(let i = 0 ; i<valueInput.length; i++){
+      //   element+=`
+      //   <div class="feedback-list" id="feedbackList" style="display: none;">
+      //       <b><span class="material-symbols-outlined">
+      //         account_circle
+      //         ${valueInput[i].valueInput}
+              
+      //        </b>
+      //        <b> </span> <span class="material-symbols-outlined">
+      //         edit_square
+      //         </span><span class="material-symbols-outlined">
+      //           delete
+      //           </span></b>
+      //     </div>
+      //   `
+      // }
+
+      // }
+
+     
+      function addFeedback(){
+         const input = document.getElementById("reviewInput").value;
+         localStorage.setItem("valueInput", JSON.stringify(reviewInput))
+         let valueInput = JSON.parse(localStorage.getItem("valueInput")) || [];
+        console.log(input)
+       
+      }
+    </script>
+  </body>
+</html>
