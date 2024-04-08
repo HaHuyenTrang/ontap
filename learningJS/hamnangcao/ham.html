@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //    filter 
+    //  let numbers = [5,9,12,16];
+    //  let result = numbers.filter((item,index,array)=>{
+    //     return item>11
+    //  })
+    //  console.log(result);
+
+
+    // find
+    let student=[
+        {
+            id:10,
+            name: "Huyền Trang",
+            address:" Sơn La",
+        },
+        {
+            id:11,
+            name: "Chang Chang",
+            address:" Bắc Yên",
+        }
+
+    ]
+        let result = student.find((item, index, array)=>{
+            return item.name == ("Chang Chang")
+        })
+        console.log(result);
+    </script>
+    
+</body>  <!--  filter: +lọc các phần tử trong mảng thỏa mãn điều kiện
+                       +tạo mảng mới 
+                       +nếu không lọc được phần tử nào thỏa mãn điều kiện thì kq trả về
+
+               find:   +tìm kiếm phần tử trong array
+                       + tìm kiếm thấy =>trả về phần tử thỏa mãn điều kiện
+
+         -->
+        
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let classroom = [
+        {
+          id: 1,
+          number: 123,
+        },
+        {
+          id: 2,
+          number: 13,
+        },
+        {
+          id: 3,
+          number: 23,
+        },
+      ];
+      function xuLyLopHoc() {
+        var lopHocMoi = classroom.map(function (lop) {
+          if (lop.number < 30) {
+            lop.number += 10;
+          } else if (lop.number > 40) {
+            lop.number -= 10;
+          }
+          return lop;
+        });
+
+        console.log(lopHocMoi);
+      }
+      xuLyLopHoc();
+    </script>
+  </body>
+</html>
