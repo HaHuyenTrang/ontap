@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let number =[1,2,3,4]
+        // let sum =0;
+        // for(let i = 0; i<number.length; i++){
+            
+        //     sum+=number[i];
+        // }
+        // console.log(sum);
+        // let toltal = number.reduce((accumulator,currentValue,array)=>{
+        //     return accumulator+currentValue
+        // },0)
+        // console.log(toltal);
+
+
+        // let number =[5,7,9,11]
+        // let nb = number.reduce((accumulator,currentValue, array)=>{
+        //     return accumulator+currentValue
+        // })
+        // console.log(nb);
+        // let nbr = number.reduce((accumulator,currentValue, array)=>{
+        //     return accumulator+currentValue
+        // },0)
+        // console.log(nbr);
+
+
+
+        let product =[
+            {
+                name:"iphone5",
+                quantity :5,
+                price:2000,
+            },
+            {
+                name:"iphone12",
+                quantity :6,
+                price:5000,
+            },
+            {
+                name:"iphone15",
+                quantity :8,
+                price:8000,
+            },
+        ]
+        let result = product.reduce((accumulator,currentValue, array)=>{
+            return accumulator+currentValue.quantity *currentValue.price
+        },0)
+        console.log(result);
+    </script>
+</body>
+</html>

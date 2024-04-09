@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr=[1,2,-3,-5,-1]
+        function hasNegativeNumber(arr){
+            let hasNegative = arr.some(item=>
+                 item <0 );
+            if( hasNegative){
+                console.log(true);
+            }else{
+                console.log(false);
+            }
+        }
+        hasNegativeNumber(arr)
+    </script>
+</body>
+</html>

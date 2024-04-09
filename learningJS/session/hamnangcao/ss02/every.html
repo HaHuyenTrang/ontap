@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let student=[
+            {
+                name: "mai",
+                gender:"male",
+                address: "hà nội",
+            },
+            {
+                name: "nam",
+                gender:"female",
+                address: "hà nội",
+            },
+            {
+                name: "ngoc",
+                gender:"female",
+                address: "hà nội",
+            },
+        ]
+        let std= student.every((item, index, array) =>{
+            return item.gender ==="male"
+        })
+        if(std==false){
+            console.log("không");
+        }else{
+            console.log(có);
+        }
+
+        let stds= student.every((item, index, array) =>{
+            return item.address ==="hà nội"
+        })
+        if(stds==false){
+            console.log("không");
+        }else{
+            console.log("có");
+        }
+    </script>
+</body>
+</html>

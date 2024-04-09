@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let accounts =[
+            {
+                name:"Trang",
+                password:"12345",
+                address:"Sơn La"
+            },
+            {
+                name:"Trang",
+                password:"2345",
+                address:"Ninh Bình"
+            },
+            {
+                name:"Trang",
+                password:"23465",
+                address:"Ninh Thuận"
+            },
+        ]
+        let test = accounts.some((item, index, array) =>{
+            return item.address ==="Ninh Bình"
+        })
+        console.log(test);
+        if(test == true){
+            console.log("có");
+        }else{
+            console.log("không");
+        }
+    </script>
+</body>
+</html>
