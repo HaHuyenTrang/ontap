@@ -8,10 +8,10 @@
 <body>
     <div>
     <h2>The word is: <b id="star"></b> </h2>
-    <input type="text"> <span>Remaining guess: <b id="guess"></b></span>
+    <input type="text" id="input"> <span>Remaining guess: <b id="guess"></b></span>
     <br>
     <br>
-    <button >Guess</button>
+    <button onclick="check()" >Guess</button>
     </div>
     <script>
         let starElement = document.getElementById("star")
@@ -44,7 +44,20 @@
 
         // b4 hiển thị ra giao diện
 
-
+        // 
+        function check(){
+            let dataInput = document.getElementById("input").value;
+            console.log(dataInput);
+            for(let i = 0; i<dataInput.length; i++){
+                for(let j = 0; j<index.length; j++){
+                   if( dataInput[i] == index[j]){
+                    console.log("đúng");
+                   }else{
+                    console.log("sai");
+                   }
+                }
+            }
+        }
     </script>
 </body>
 </html>
