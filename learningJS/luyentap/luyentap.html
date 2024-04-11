@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <h2>The word is: <b id="star"></b> </h2>
+    <input type="text"> <span>Remaining guess: <b id="guess"></b></span>
+    <br>
+    <br>
+    <button >Guess</button>
+    </div>
+    <script>
+        let starElement = document.getElementById("star")
+        let text =``;
+        let guessElement = document.getElementById("guess")
+
+        let arr =["tan", "tai", "loc", "tho", "hoa", "nam", "han" ]
+        // localStorage.setItem("Arr", JSON.stringify(Arr))
+        // b1 lấy ngẫu nhiên 1 pt
+        let index= Math.floor(Math.random()*9);
+        // b2 tính độ dài phần tử
+        console.log(index,arr[index].length);
+
+        // phần tử ngẫu nhiên trong mảng
+        let element= arr[index]
+        
+        //độ dài phần tử ngẫu nhiên
+        let elementLength = element.length
+        
+        //lặp qua độ dài của phần tử
+        for(let i =0; i<elementLength; i++){
+            text += "* "
+
+        }
+        
+        // gán chuỗi * vào trong dom
+        starElement.innerHTML=text
+        guessElement.innerHTML = elementLength
+        // console.log(text);
+
+        // b4 hiển thị ra giao diện
+
+
+    </script>
+</body>
+</html>
